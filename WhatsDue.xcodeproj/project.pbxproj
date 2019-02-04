@@ -8,31 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		634EDB611FF2E90400D6A9E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634EDB601FF2E90400D6A9E0 /* AppDelegate.swift */; };
-		634EDB631FF2E90400D6A9E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634EDB621FF2E90400D6A9E0 /* ViewController.swift */; };
+		634EDB631FF2E90400D6A9E0 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634EDB621FF2E90400D6A9E0 /* MainTableViewController.swift */; };
 		634EDB661FF2E90400D6A9E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634EDB641FF2E90400D6A9E0 /* Main.storyboard */; };
 		634EDB6B1FF2E90400D6A9E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 634EDB691FF2E90400D6A9E0 /* LaunchScreen.storyboard */; };
 		634EDB731FF2F59800D6A9E0 /* BillReminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634EDB721FF2F59800D6A9E0 /* BillReminder.swift */; };
 		634EDB771FF30C9000D6A9E0 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 634EDB761FF30C9000D6A9E0 /* CustomTableViewCell.swift */; };
+		636E99DC2207CE7700C550DE /* Date+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636E99DB2207CE7700C550DE /* Date+ext.swift */; };
+		636E99DE2207CE8500C550DE /* HideKeyboard+ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636E99DD2207CE8500C550DE /* HideKeyboard+ext.swift */; };
 		637838B31FF9590A00181D87 /* ViewControllerEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637838B21FF9590A00181D87 /* ViewControllerEntry.swift */; };
-		63A1F58C2023939E005B0E4F /* BofMVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A1F58B2023939E005B0E4F /* BofMVC.swift */; };
-		63A1F58E20239527005B0E4F /* Tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A1F58D20239527005B0E4F /* Tab.swift */; };
-		63A1F5902023992D005B0E4F /* CustomTVCBofM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A1F58F2023992D005B0E4F /* CustomTVCBofM.swift */; };
 		63AE26452023E4BF001AF122 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63AE26442023E4BE001AF122 /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		634EDB5D1FF2E90400D6A9E0 /* WhatsDue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatsDue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		634EDB601FF2E90400D6A9E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		634EDB621FF2E90400D6A9E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		634EDB621FF2E90400D6A9E0 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		634EDB651FF2E90400D6A9E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		634EDB6A1FF2E90400D6A9E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		634EDB6C1FF2E90400D6A9E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		634EDB721FF2F59800D6A9E0 /* BillReminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BillReminder.swift; sourceTree = "<group>"; };
 		634EDB761FF30C9000D6A9E0 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		636E99DB2207CE7700C550DE /* Date+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+ext.swift"; sourceTree = "<group>"; };
+		636E99DD2207CE8500C550DE /* HideKeyboard+ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HideKeyboard+ext.swift"; sourceTree = "<group>"; };
 		637838B21FF9590A00181D87 /* ViewControllerEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerEntry.swift; sourceTree = "<group>"; };
-		63A1F58B2023939E005B0E4F /* BofMVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BofMVC.swift; sourceTree = "<group>"; };
-		63A1F58D20239527005B0E4F /* Tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tab.swift; sourceTree = "<group>"; };
-		63A1F58F2023992D005B0E4F /* CustomTVCBofM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTVCBofM.swift; sourceTree = "<group>"; };
 		63AE26442023E4BE001AF122 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -70,6 +68,7 @@
 				636E99D82207BD3200C550DE /* Controller */,
 				636E99D72207BD2D00C550DE /* Model */,
 				636E99D62207BD2600C550DE /* View */,
+				636E99DF2207CF9A00C550DE /* Resources */,
 				634EDB601FF2E90400D6A9E0 /* AppDelegate.swift */,
 				634EDB6C1FF2E90400D6A9E0 /* Info.plist */,
 				63AE26442023E4BE001AF122 /* Assets.xcassets */,
@@ -81,7 +80,6 @@
 			isa = PBXGroup;
 			children = (
 				634EDB761FF30C9000D6A9E0 /* CustomTableViewCell.swift */,
-				63A1F58F2023992D005B0E4F /* CustomTVCBofM.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -90,7 +88,6 @@
 			isa = PBXGroup;
 			children = (
 				634EDB721FF2F59800D6A9E0 /* BillReminder.swift */,
-				63A1F58D20239527005B0E4F /* Tab.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -98,8 +95,7 @@
 		636E99D82207BD3200C550DE /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				634EDB621FF2E90400D6A9E0 /* ViewController.swift */,
-				63A1F58B2023939E005B0E4F /* BofMVC.swift */,
+				634EDB621FF2E90400D6A9E0 /* MainTableViewController.swift */,
 				637838B21FF9590A00181D87 /* ViewControllerEntry.swift */,
 			);
 			path = Controller;
@@ -112,6 +108,23 @@
 				634EDB691FF2E90400D6A9E0 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		636E99DA2207CE4D00C550DE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				636E99DB2207CE7700C550DE /* Date+ext.swift */,
+				636E99DD2207CE8500C550DE /* HideKeyboard+ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		636E99DF2207CF9A00C550DE /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				636E99DA2207CE4D00C550DE /* Extensions */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,14 +200,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				636E99DC2207CE7700C550DE /* Date+ext.swift in Sources */,
 				637838B31FF9590A00181D87 /* ViewControllerEntry.swift in Sources */,
-				634EDB631FF2E90400D6A9E0 /* ViewController.swift in Sources */,
-				63A1F5902023992D005B0E4F /* CustomTVCBofM.swift in Sources */,
-				63A1F58C2023939E005B0E4F /* BofMVC.swift in Sources */,
+				634EDB631FF2E90400D6A9E0 /* MainTableViewController.swift in Sources */,
 				634EDB731FF2F59800D6A9E0 /* BillReminder.swift in Sources */,
+				636E99DE2207CE8500C550DE /* HideKeyboard+ext.swift in Sources */,
 				634EDB771FF30C9000D6A9E0 /* CustomTableViewCell.swift in Sources */,
 				634EDB611FF2E90400D6A9E0 /* AppDelegate.swift in Sources */,
-				63A1F58E20239527005B0E4F /* Tab.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

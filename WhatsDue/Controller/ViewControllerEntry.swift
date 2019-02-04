@@ -74,8 +74,8 @@ class ViewControllerEntry: UIViewController {
     }
     
     func saveData(billReminder: BillReminder ) {
-        data.append(billReminder);
         
+        data.append(billReminder);
         NSKeyedArchiver.archiveRootObject(data, toFile: filePath)  // Saves array of data
     }
 }

@@ -6,9 +6,6 @@
 //  Copyright © 2017 Aaron O'Connor. All rights reserved.
 
 
-// To do:
-// Update "Paid on" date
-
 import UIKit
 
 var data = [BillReminder]()
@@ -18,21 +15,15 @@ let calendar = Calendar.current
 var fakeDate = Date()
 var paidToday = Date()
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MainTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var myUIView: UIView!
+    @IBOutlet weak var myTableView: UITableView!
     
     let month = Calendar.current.component(.month, from: today)
     let date = Calendar.current.component(.day, from: today)
     let year = Calendar.current.component(.year, from: today)
     
-    @IBAction func btnCheckStatus(_ sender: Any) {
-        self.checkStatus()
-    }
-    @IBOutlet weak var myTableView: UITableView!
-    @IBAction func btnAddBillReminder(_ sender: Any) {
-        
-    }
     
     var filePath: String {
         let manager = FileManager.default;
@@ -40,27 +31,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return url!.appendingPathComponent("Data").path;
     }
     
-    func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        if segue.identifier == "segue1" {
-            
-        }
-    }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    // MARK: - Functions
+    
+    func saveData(billReminder: BillReminder ) {
+        data.append(billReminder);
         
-        self.loadData()
-        self.sortData()
-        checkStatus()
-        
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-    
-        if (data.count == 0) {
-            //self.performSegue(withIdentifier: "segue1", sender: self)
-            self.performSegue(withIdentifier: "segue1", sender: self)
-        }
+        NSKeyedArchiver.archiveRootObject(data, toFile: filePath)  // Saves array of data
     }
     
     func sortData() {
@@ -157,6 +134,37 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return todaysDate
     }
     
+    func loadData() {
+        if let ourData = NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? [BillReminder] {
+            data = ourData;
+        }
+        self.myTableView.reloadData();
+    }
+    
+    // MARK: - ViewControll Life Cycle
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.loadData()
+        self.sortData()
+        checkStatus()
+        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+    
+        if (data.count == 0) {
+            //self.performSegue(withIdentifier: "segue1", sender: self)
+            self.performSegue(withIdentifier: "segue1", sender: self)
+        }
+    }
+    
+    
+    
+    
+    // MARK: - TableView Data Source
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
@@ -192,6 +200,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
     }
     
+    
+    // MARK: - TableView Delegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         
@@ -247,67 +257,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
-    func saveData(billReminder: BillReminder ) {
-        data.append(billReminder);
-        
-        NSKeyedArchiver.archiveRootObject(data, toFile: filePath)  // Saves array of data
-        
-    }
-    
-    func loadData() {
-        if let ourData = NSKeyedUnarchiver.unarchiveObject(withFile: filePath) as? [BillReminder] {
-            data = ourData;
-        }
-        self.myTableView.reloadData();
-    }
-}
-
-// Extensions
-
-extension Date {
-    var formatted: String {
-        let df = DateFormatter()
-        df.dateFormat = "MM/dd"
-        df.locale = NSLocale(localeIdentifier: "en_US_POSIX") as Locale
-        return df.string(from: self as Date)
-    }
-}
-
-extension UIViewController {
-    func hideKeyboardWhenTappedAround() {
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
-        tap.cancelsTouchesInView = false
-        view.addGestureRecognizer(tap)
-    }
-    
-    @objc func dismissKeyboard() {
-        view.endEditing(true)
-    }
-}
-
-extension Formatter {
-    static let monthMedium: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "LLLL"
-        return formatter
-    }()
-    static let hour12: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "h"
-        return formatter
-    }()
-    static let minute0x: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "mm"
-        return formatter
-    }()
-    static let amPM: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "a"
-        return formatter
-    }()
+ 
     
     // MARK: - Navigate
+    
+    func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        if segue.identifier == "enterNewSegue" {
+            
+        }
+    }
+    
     @IBAction func unwindToMain(_ unwindSegue: UIStoryboardSegue) {
        //  let sourceViewController = unwindSegue.source
         // Use data from the view controller which initiated the unwind segue
